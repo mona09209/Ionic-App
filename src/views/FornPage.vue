@@ -1,0 +1,516 @@
+
+
+<template>
+  <ion-page>
+     <ion-header :translucent="true" id="header">
+      
+       
+        <ion-title>
+        <ion-grid>
+              <ion-row>
+                <ion-col>
+                   <ion-buttons >
+          <ion-menu-button  ></ion-menu-button>
+       
+             <ion-col>   </ion-col>
+             <ion-col id="mega">Mega Store</ion-col>
+                                                             <ion-button  id="open-modal" expand="block"><ion-icon :src="cart" id="cart" slot="start" ></ion-icon> <ion-badge color="danger" >{{counter}}</ion-badge></ion-button>
+  
+<ion-modal ref="modal" trigger="open-modal" :presenting-element="presentingElement">
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Cart</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="light" @click="dismiss()">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+            
+         <ion-grid id="grid">
+  <ion-row id="heading">
+    <ion-col class="col">
+      <div>NO</div>
+    </ion-col>
+    <ion-col class="col">
+      <div>NAME</div>
+    </ion-col>
+    <ion-col class="col">
+      <div>PRICE</div>
+    </ion-col>
+    <ion-col class="col">
+      <div>QUANTITY</div>
+    </ion-col>
+    <ion-col class="col">
+      <div>TOTAL</div>
+    </ion-col>
+  </ion-row>
+  <ion-row  id="heading">
+    <ion-col >
+      <div>{{index+1}}</div>
+    </ion-col>
+    <ion-col>
+      <div> <img src="assets/forn/1.jpg"  alt="ion"></div>
+    </ion-col>
+    <ion-col>
+      <div>PRICE</div>
+    </ion-col>
+    <ion-col >
+      <div>QUANTITY</div>
+    </ion-col>
+    <ion-col >
+      <div>TOTAL</div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+          
+        </ion-list>
+      </ion-content>
+    </ion-modal>
+
+        </ion-buttons>
+                </ion-col>
+           
+           
+              </ion-row>
+              <ion-row>
+               <ion-col >
+                 <ion-searchbar animated></ion-searchbar>
+               </ion-col>
+               
+              </ion-row>
+            </ion-grid>
+        </ion-title>
+    
+    </ion-header>
+    
+    <ion-content :fullscreen="true">
+      <ion-header collapse="condense">
+        
+        
+      </ion-header>
+      
+   <div class="container ">
+<ion-grid >
+  
+  <ion-row>
+    <ion-col size="6">
+        <ion-card >
+          <img src="assets/forn/1.jpg"  alt="ion">
+    <ion-card-header>
+
+<ion-card-title >
+    Forn <ion-badge color="warning" ><ion-label>$</ion-label>1000</ion-badge>
+</ion-card-title>   
+    </ion-card-header>
+
+    <ion-card-content>
+      Lorem ipsum dolor sit amet.
+      </ion-card-content>
+ <ion-footer><ion-row>
+  <ion-col center text-center><ion-button expand="block" v-on:click="counter+=1"><div>ADD TO CART</div></ion-button></ion-col>
+  
+  </ion-row></ion-footer>
+    
+  </ion-card >
+    </ion-col>
+
+    <ion-col size="6">
+              <ion-card>
+          <img src="assets/forn/2.jpg" alt="ion">
+    <ion-card-header>
+
+<ion-card-title>
+    Forn <ion-badge color="warning" ><ion-label>$</ion-label>1000</ion-badge>
+</ion-card-title>   
+    </ion-card-header>
+
+    <ion-card-content>
+      Lorem ipsum dolor sit amet.
+    </ion-card-content>
+ <ion-footer><ion-row>
+  <ion-col center text-center><ion-button expand="block" v-on:click="counter+=1"><div>ADD TO CART</div></ion-button></ion-col>
+  
+  </ion-row></ion-footer>
+    
+  </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-row>
+  <ion-row>
+    <ion-col size="6">
+        <ion-card>
+          <img src="assets/forn/3.jpg" alt="ion">
+    <ion-card-header>
+
+<ion-card-title >
+    Forn <ion-badge color="warning" ><ion-label>$</ion-label>1000</ion-badge>
+</ion-card-title>   
+    </ion-card-header>
+
+    <ion-card-content>
+      Lorem ipsum dolor sit amet.
+      </ion-card-content>
+ <ion-footer><ion-row>
+  <ion-col center text-center><ion-button expand="block" v-on:click="counter+=1"><div>ADD TO CART</div></ion-button></ion-col>
+  
+  </ion-row></ion-footer>
+    
+  </ion-card >
+    </ion-col>
+
+    <ion-col size="6">
+              <ion-card>
+          <img src="assets/forn/4.jpg" alt="ion">
+    <ion-card-header>
+
+<ion-card-title>
+    Forn <ion-badge color="warning" ><ion-label>$</ion-label>1000</ion-badge>
+</ion-card-title>   
+    </ion-card-header>
+
+    <ion-card-content>
+      Lorem ipsum dolor sit amet.
+    </ion-card-content>
+ <ion-footer><ion-row>
+  <ion-col center text-center><ion-button expand="block" v-on:click="counter+=1"><div>ADD TO CART</div></ion-button></ion-col>
+  
+  </ion-row>
+  
+  </ion-footer>
+    
+  </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-row>
+<ion-row>
+    <ion-col size="6">
+        <ion-card>
+          <img src="assets/forn/5.jpg" alt="ion">
+    <ion-card-header>
+
+<ion-card-title >
+    Forn <ion-badge color="warning" ><ion-label>$</ion-label>1000</ion-badge>
+</ion-card-title>   
+    </ion-card-header>
+
+    <ion-card-content>
+      Lorem ipsum dolor sit amet.
+      </ion-card-content>
+ <ion-footer><ion-row>
+  <ion-col center text-center><ion-button expand="block" v-on:click="counter+=1"><div>ADD TO CART</div></ion-button></ion-col>
+  
+  </ion-row></ion-footer>
+    
+  </ion-card >
+    </ion-col>
+
+    <ion-col size="6">
+              <ion-card>
+          <img src="assets/forn/6.jpg" alt="ion">
+    <ion-card-header>
+
+<ion-card-title>
+    Forn<ion-badge color="warning" ><ion-label>$</ion-label>1000</ion-badge>
+</ion-card-title>   
+    </ion-card-header>
+
+    <ion-card-content>
+      Lorem ipsum dolor sit amet.
+    </ion-card-content>
+ <ion-footer><ion-row>
+  <ion-col center text-center><ion-button expand="block" v-on:click="counter+=1"><div class="dic">ADD TO CART</div></ion-button></ion-col>
+  
+  </ion-row></ion-footer>
+    
+  </ion-card>
+    </ion-col>
+     <ion-col size="6">
+        <ion-card>
+          <img src="assets/forn/7.jpg" alt="ion">
+    <ion-card-header>
+
+<ion-card-title >
+    Forn <ion-badge color="warning" ><ion-label>$</ion-label>1000</ion-badge>
+</ion-card-title>   
+    </ion-card-header>
+
+    <ion-card-content>
+      Lorem ipsum dolor sit amet.
+      </ion-card-content>
+ <ion-footer><ion-row>
+  <ion-col center text-center><ion-button expand="block" v-on:click="counter+=1"><div>ADD TO CART</div></ion-button></ion-col>
+  
+  </ion-row></ion-footer>
+    
+  </ion-card >
+    </ion-col>
+     <ion-col size="6">
+        <ion-card>
+          <img src="assets/forn/8.jpg" alt="ion">
+    <ion-card-header>
+<ion-card-title >
+    Forn <ion-badge color="warning" ><ion-label>$</ion-label>1000</ion-badge>
+</ion-card-title>   
+    </ion-card-header>
+
+    <ion-card-content>
+      Lorem ipsum dolor sit amet.
+      </ion-card-content>
+ <ion-footer><ion-row>
+  <ion-col center text-center><ion-button expand="block" v-on:click="counter+=1"><div>ADD TO CART</div></ion-button></ion-col>
+  
+  </ion-row></ion-footer>
+    
+  </ion-card >
+    </ion-col>
+
+
+  </ion-row>
+  
+       
+      </div>
+      
+      
+    </ion-content>
+  </ion-page>
+</template>
+
+<script>
+
+import { IonButtons, IonContent,IonGrid,IonRow,IonCardHeader,IonButton,IonCardContent,IonCardTitle,IonFooter,IonCol,IonCard,IonBadge, IonHeader, IonMenuButton, IonPage, IonTitle, IonSearchbar,IonModal } from '@ionic/vue';
+import {cart ,trash,arrow} from 'ionicons/icons';
+
+import { defineComponent } from 'vue';
+export default defineComponent({
+  name: 'FolderPage',
+  components: {
+    IonButtons,
+    IonGrid,IonRow,IonCardHeader,IonButton,IonCardContent,IonCardTitle,IonFooter,IonCol,IonCard,IonBadge,
+    IonContent,
+    IonHeader,
+    IonMenuButton,
+    IonPage,
+    IonTitle,
+    IonModal,
+IonSearchbar,
+
+  },
+  setup(){
+    const slideOpts = {
+      initialSlide: 1,
+      speed: 400
+    };
+    return { slideOpts,
+    cart,
+    arrow,
+    trash
+    }
+    
+    
+  },
+ data(){
+return{
+  counter : 0,
+  presentingElement: null,
+    count: 0,
+    carts:[],
+    products:[{name:"iron"}]
+}
+ }
+,
+methods: {
+increment() {
+        this.count++;
+      },
+      decrement() {
+        this.count--;
+      },
+
+ increaseOver(){
+  // getting
+  var span = document.querySelector("ion-badge")
+  // processing
+  this.counter++
+  // setting
+  span.innerHTML = this.counter
+}
+,
+ dismiss() {
+        this.$refs.modal.$el.dismiss();
+      },
+
+},
+
+       mounted() {
+      this.presentingElement = this.$refs.page.$el;
+    },
+
+});
+
+
+</script>
+
+<style scoped>
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+p{
+      color:black;
+}
+ion-modal {
+    --height: 50%;
+    --border-radius: 16px;
+    --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+
+  ion-modal::part(backdrop) {
+    background: rgba(209, 213, 219);
+    opacity: 1;
+  }
+
+  ion-modal ion-toolbar {
+    --background: rgb(14 116 144);
+    --color: white;
+  }
+  #icon{
+      color: rgb(11, 84, 104);
+       vertical-align: top;
+  position: relative;
+  left: 30%;
+      text-decoration: none;
+}
+#image{
+      height: 20%;
+width: 20%;
+ background-size: cover;
+}
+#grid{
+   font-family:  helvetic;
+  border-collapse: collapse;
+  width: 98%;
+ 
+}
+#grid:hover{
+  
+    background-color: rgb(90, 90, 90);
+ 
+}
+
+#heading{
+ 
+ 
+ 
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(0, 0, 0);
+  box-shadow: #000;
+}
+#cart{
+  vertical-align: top;
+  position: relative;
+  left: 25%;
+  font-size: 30px;
+ color: #fff;
+}
+#tv{
+  width: 500%;
+}
+#iron{
+  width: 500%;
+}
+#cold{
+  width: 500%;
+}
+
+ion-slides{
+ width: 700%;
+ height: 700%;
+ 
+}
+h2{
+font-family: Roboto;
+
+}
+ion-searchbar{
+margin: auto;
+color:rgb(3, 98, 110);
+}
+#header{
+  height: 25%;
+  background: rgb(3, 98, 110);
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  color: #28ba62;
+  padding: 15px;
+}
+
+
+ion-card{
+  background-size: cover;
+}
+
+ion-button{
+  font-family: helvetic;
+}
+ion-Searchbar{
+margin: auto;
+color:rgb(3, 98, 110);
+}
+#mega{
+  right: 15%;
+  color:#fff;
+}
+ion-menu-button{
+  font-size: 55px !important;
+  color:#fff;
+}
+ion-icon{
+background-color: none;
+color: #fff;
+   font-size: 30px;
+   --ionicon-stroke-width:16px;
+}
+
+ion-slides{
+  height: 200px;
+  
+}
+#open-modal{
+  vertical-align: top;
+  position: relative;
+  left: 5%;
+}
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+.spin{
+    text-align: center;
+  }
+  ion-spinner {
+    width: 28px;
+    height: 28px;
+    stroke: #444;
+    fill: #222;
+  }
+  ion-badge{
+    border-radius: 30px;
+  }
+</style>

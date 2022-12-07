@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.vue.Moon" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Mona</name>
+  <description>Sample Apache Cordova App</description>
+  <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Apache Cordova Team
+    </author>
+  <hook type="after_prepare" src="../node_modules/vue-cli-plugin-cordova/serve-config-hook.js"/>
+  <content src="index.html"/>
+  <allow-intent href="http://*/*"/>
+  <allow-intent href="https://*/*"/>
+<preference name="SplashMaintainAspectRatio" value="true|false" />
+<preference name="SplashShowOnlyFirstTime" value="true|false" />
+<preference name="SplashScreenSpinnerColor" value="white" />
+</widget>
